@@ -1,0 +1,84 @@
+body,html{font-family:Regular;margin:0px;height:100vh;color:rgba(0,0,0,0.82);background:white;width: 100vw;overflow-x: auto;overflow-y:hidden;}
+h1,h2,h3,h4,h5,h6,svg,div:focus{outline:none;}
+h1,h2,h3,h4,h5,h6,p{float:left;margin:0px;padding:0px;}
+div,h1,h2,h3,h4,h5,h6,p{position:relative;box-sizing: border-box;}
+div[hidden] {display: none !important;}
+input,textarea{font-family: QuicksandRegular;border:none;padding:0vh;width:100%;}
+input,textarea:focus{outline:none;color:#000;}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{box-shadow: 0 0 0 1000px white inset;border-color: #ededed;}
+@font-face {font-family: 'Regular';font-style: normal;font-weight: 300;src: local('assets/fonts/Montserrat-ThinItalic.ttf'), local('assets/fonts/Montserrat-ThinItalic.ttf'), url('assets/fonts/Montserrat-ThinItalic.ttf') format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;}
+@font-face {font-family: 'Regular';font-style: normal;font-weight: 400;src: local('assets/fonts/Montserrat-Medium.ttf'), local('assets/fonts/Montserrat-Medium.ttf'), url('assets/fonts/Montserrat-Medium.ttf') format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;}
+@font-face {font-family: 'Regular';font-style: normal;font-weight: 100;src: local('assets/fonts/Montserrat-Light.ttf'), local('assets/fonts/Montserrat-Light.ttf'), url('assets/fonts/Montserrat-Light.ttf') format('woff2');unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;}
+.b{float:left;height: 100%;width: 100%;overflow:hidden;}
+.px12{font-size:12px;}
+.px13{font-size:13px;}
+.px14{font-size:14px;}
+.px15{font-size:15px;}
+.px16{font-size:16px;}
+.px20{font-size:20px;}
+.bxshdw1{box-shadow: 0 2px 3px 0 rgba(0,0,0,0.15);}
+.bxshdw2{box-shadow: 0 2px 3px 0 rgba(0,0,0,0.25);}
+.lw{font-weight:100;}
+.mw{font-weight:300;}
+.hw{font-weight:400;}
+.brd{border-style:solid;border-color:#ededed;}
+.fBrd{border-width:1px;}
+.lBrd{border-width:0px 0px 0px 1px;}
+.rBrd{border-width:0px 1px 0px 0px;}
+.tBrd{border-width:1px 0px 0px 0px;}
+.bBrd{border-width:0px 0px 1px 0px;}
+.tbBrd{border-width:1px 0px 1px 0px;}
+.trlBrd{border-width:1px 1px 0px 1px;}
+.lbBrd{border-width:0px 0px 1px 1px;}
+.lrBrd{border-width:0px 1px 0px 1px;}
+.trBrd{border-width:1px 1px 0px 0px;}
+.rbBrd{border-width:0px 1px 1px 0px;}
+.tlBrd{border-width:1px 0px 0px 1px;}
+.lrbBrd{border-width:0px 1px 1px 1px;}
+.bm{margin:20px;}
+.blm{margin:0vh 0vh 0vh 20px;}
+.brm{margin:0vh 20px 0vh 0vh;}
+.bxtm{margin:20px 0vh 0vh 0vh;}
+.bbm{margin:0vh 0vh 20px 0vh;}
+.blrm{margin:0vh 20px;}
+.bbtm{margin:20px 0vh;}
+.btlm{margin:20px 0vh 0vh 20px;}
+.btrm{margin:20px 20px 0vh 0vh;}
+.brbm{margin:0vh 20px 20px 0vh;}
+.m{margin:10px;}
+.lm{margin:0vh 0vh 0vh 10px;}
+.rm{margin:0vh 10px 0vh 0vh;}
+.tm{margin:10px 0vh 0vh 0vh;}
+.bm{margin:0vh 0vh 10px 0vh;}
+.lrm{margin:0vh 10px;}
+.btm{margin:10px 0vh;}
+.tlm{margin:10px 0vh 0vh 10px;}
+.trm{margin:10px 10px 0vh 0vh;}
+.rbm{margin:0vh 10px 10px 0vh;}
+.mz{margin:0vh;}
+.bp{padding:20px;}
+.blp{padding:0vh 0vh 0vh 20px;}
+.brp{padding:0vh 20px 0vh 0vh;}
+.btp{padding:20px 0vh 0vh 0vh;}
+.bbp{padding:0vh 0vh 20px 0vh;}
+.blrp{padding:0vh 20px 0vh 20px;}
+.btbp{padding:20px 0vh 20px 0vh;}
+.bbrp{padding:0vh 20px 20px 0vh;}
+.bblp{padding: 0vh 0vh 20px 20px;}
+.p{padding:10px;}
+.lp{padding:0vh 0vh 0vh 10px;}
+.rp{padding:0vh 10px 0vh 0vh;}
+.tp{padding:10px 0vh 0vh 0vh;}
+.bbp{padding:0vh 0vh 10px 0vh;}
+.lrp{padding:0vh 10px 0vh 10px;}
+.tbp{padding:10px 0vh 10px 0vh;}
+.brp{padding:0vh 10px 10px 0vh;}
+.blp{padding: 0vh 0vh 10px 10px;}
+.zp{padding:0vh;}
+.h{float:left;width:100%;height:auto;}
+.v{float:left;width:auto;height:100%;}
+.vh{float:left;height:auto;width:auto;}
+.circle{border-radius: 50%}
+.pt{cursor:pointer;}
+.clr{color:#000}
+.clr1{color:#2196f3}

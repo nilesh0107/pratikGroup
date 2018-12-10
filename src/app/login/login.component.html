@@ -1,0 +1,48 @@
+<div class="b" layout="row" layout-align="center start">
+	<div class="vh bg1" style="width:27%;margin-top:40px;">
+		<div class="b">
+			<form  class="b" #loginForm="ngForm">
+				<div class="b lrp">
+					<div class="h bm" layout="row" layout-align="center center">
+						<div class="vh pt" layout="row" layout-align="center center">
+							<img src="../../assets/images/logo.jpg" alt="logo" width="200" height="144">
+						</div>
+					</div>
+					<div class="h btm" style="margin:30px 0px" layout="row" layout-align="start center">
+						<div class="vh" layout="row" layout-align="center center">
+							<h5 class="lw" style="font-size:30px;color:#335d9a">Member Login</h5>
+						</div>
+					</div>
+					<div class="h btm">
+						<h5 class="px14 lw" style="color:#000">Username</h5>
+					 	<div class="h brd bBrd tm" layout="row" layout-align="start center">      
+							<input name="id" #name="ngModel" maxlength="100" class="px16" style="margin-bottom:5px;" [(ngModel)]="user" type="text" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm">
+						<h5  class="px14 lw" style="color:#000">Password</h5>
+					 	<div class="h brd bBrd tm" layout="row" layout-align="start center">      
+							<input name="password" #name="ngModel" maxlength="100" class="px16" style="margin-bottom:5px;" [(ngModel)]="password" type="password" autocomplete="off">
+					 	</div>
+					</div>
+					<div class="h btm" style="margin:20px 0px" layout="row" layout-align="start center">
+						<div class="vh pt" layout="row" layout-align="center center">
+							<img src="../../assets/images/baseline_check_box_black_36dp.png" alt="Remember Me" width="24" height="24">
+						</div>
+						<div class="vh lm" layout="row" layout-align="center center">
+							<h5 class="px14 lw" style="color:#000">Remember Me</h5>
+						</div>
+					</div>
+					<div class="h tm" layout="row" layout-align="space-between center">
+						<div class="vh pt" (click)="loginFunc(user,password)" style="width:30px;background:#3c8af6;padding:10px 40px;border-radius:3px" layout="row" layout-align="center center">
+							<h5 class="px14 hw" style="color:#fff">LOGIN</h5>
+						</div>
+						<div class="vh pt" style="border-bottom:1px solid #3f8ccd">
+							<h5 class="px14 hw" style="color:#3f8ccd">Forget Username/Password?</h5>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

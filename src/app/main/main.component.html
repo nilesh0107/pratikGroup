@@ -1,0 +1,122 @@
+<div class="b">
+  <div class="h" style="height:200px">
+    <div class="v" style="width:calc(100% - 300px)" layout="column" layout-align="space-between center">
+      <div class="h bp">
+        <h5 class="px14 pt bxtm" style="font-weight:400;font-size:25px">Industry Automation</h5>
+      </div>
+      <div class="h bp" style="padding-bottom:0px" layout="row" layout-align="start center">
+        <div class="v">
+          <div class="vh brd p" [ngClass]="{trlBrd:selectedIndex == i,bBrd:selectedIndex != i}" *ngFor="let option of optionArr; let i = index;" (click)="changeIndex($event,i)">
+            <h5 class="px15 pt" [ngClass]="{clr1:selectedIndex == i,clr:selectedIndex != i}" style="margin:0px 20px;font-weight:400">{{option.CML_TITLE}}</h5>
+          </div>
+        </div>
+        <div class="v" *ngIf="selectedIndex == 1" style="margin-left:20px">
+          <div class="vh p bxshdw2" (click)="createReport($event)" style="height:35px;width:150px;background:#2196f3;border-radius:5px" layout="row" layout-align="center center">
+            <h5 class="px13 pt lrp" style="font-weight:600;color:#FFF">Create Report</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="v" style="width:300px" layout="row" layout-align="center center">
+      <div class="vh pt" layout="row" layout-align="center center">
+        <img src="../../assets/images/logo.jpg" alt="logo" width="200" height="144">
+      </div>
+    </div>
+  </div>
+  <div class="h p" style="height:calc(100% - 200px)" *ngIf="selectedIndex == 0" layout="row" layout-align="start start">
+      <!-- <h5 class="px13 pt lrp" style="font-weight:600;font-size:25px">ADD REPORT FORM HERE.</h5> -->
+      <div class="vh p bxshdw2" *ngIf="!createReportFlag" (click)="createReport($event)" style="height:35px;width:150px;background:#2196f3;border-radius:5px;margin:10px 0px 0px 10px;" layout="row" layout-align="center center">
+        <h5 class="px13 pt lrp" style="font-weight:600;color:#FFF">Create Report</h5>
+      </div>
+      <div class="h lrp" *ngIf="createReportFlag" layout="row" layout-align="start start">
+      	<form class="v" style="width:40%" #loginForm="ngForm">
+      		<div class="h btm">
+				<h5 class="px14 lw" style="color:#000">Client Name</h5>
+			 	<div class="h brd bBrd tm" layout="row" layout-align="start center">      
+					<input #name="ngModel" name="name" maxlength="100" class="px16" style="margin-bottom:5px;" [(ngModel)]="dataObj.client_Name" type="text" autocomplete="off">
+			 	</div>
+			</div>
+			<div class="h btm">
+				<h5 class="px14 lw" style="color:#000">Site Address</h5>
+			 	<div class="h brd bBrd tm" layout="row" layout-align="start center">      
+					<input #address="ngModel" name="address" maxlength="100" class="px16" style="margin-bottom:5px;" [(ngModel)]="dataObj.site_Add" type="text" autocomplete="off">
+			 	</div>
+			</div>
+			<div class="h btm" layout="row" layout-align="start center">
+				<h5 class="px14 lw" style="color:#000;width:250px">Date</h5>
+        <div class="h brd bBrd lm" style="max-width:160px" layout="row" layout-align="start center">
+          <input #date="ngModel" type="date" name="date" class="px16" style="margin-bottom:5px;" [(ngModel)]="dataObj.Date">
+        </div>
+			</div>
+			<div class="h btm" layout="row" layout-align="start center">
+				<h5 class="px14 lw" style="color:#000;width:250px">Grade</h5>
+			 	<div class="h lm" style="max-width:160px;" layout="row" layout-align="start center">      
+          <select class="px16" style="margin-bottom:5px;">
+            <option value="A">A grade</option>
+            <option value="B">B grade</option>
+            <option value="C">C grade</option>
+          </select>
+        </div>
+			</div>
+			<div class="h btm" layout="row" layout-align="start center">
+				<h5 class="px14 lw" style="color:#000;width:250px">Cement Type</h5>
+        <div class="h lm" style="max-width:160px" layout="row" layout-align="start center">      
+          <select class="px16" style="margin-bottom:5px;">
+            <option value="N/A">N/A</option>
+          </select>
+        </div>
+			</div>
+			<div class="h btm" layout="row" layout-align="start center">
+				<h5 class="px14 lw" style="color:#000;width:250px">Total Number Of Cubes</h5>
+			 	<div class="h brd bBrd lm" style="max-width:75px" layout="row" layout-align="start center">      
+					<input #cubes="ngModel" name="cubes" max="12" placeholder="Maximum 12" class="px16" style="margin-bottom:5px;" [(ngModel)]="dataObj.Cubes" type="number" autocomplete="off">
+			 	</div>
+			</div>
+			<div class="h btm" layout="row" layout-align="start center">
+				<h5 class="px14 lw" style="color:#000;width:250px">Third Party</h5>
+			 	<div class="vh pt lm" style="max-width:160px" layout="row" layout-align="center center">
+          <img src="../../assets/images/baseline_check_box_black_36dp.png" *ngIf="isThirdParty" (click)="thirdParty($event,false)" alt="select" width="24" height="24">
+          <img src="../../assets/images/baseline_check_box_outline_blank_black_36dp.png" *ngIf="!isThirdParty" (click)="thirdParty($event,true)" alt="deselect" width="24" height="24">
+				</div>
+			</div>
+			<div class="vh p tm bxshdw2" (click)="submitReport($event)" style="height:35px;width:100px;background:#2196f3;border-radius:5px;" layout="row" layout-align="center center">
+	        	<h5 class="px13 pt lrp" style="font-weight:600;color:#FFF">Submit</h5>
+	        </div>
+      	</form>
+	  </div>
+  </div>
+  <div class="h p" style="height:calc(100% - 200px)" *ngIf="selectedIndex == 1">
+    <div class="h lrp" style="height:25px;background:#8aafb9" layout="row" layout-align="start center">
+      <div class="v" style="width:14.28%" layout="row" layout-align="start center" *ngFor="let arr of menuArr;">
+        <h5 class="px13 lw">{{arr.CML_TITLE}}</h5>
+      </div>
+    </div>
+    <div class="h" style="height:calc(100% - 25px);overflow-y:auto">
+      <div class="h lrp brd bBrd" style="height:35px" *ngFor="let arr of dataArr;let i = index;" layout="row" layout-align="start center">
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.client_Name}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.site_Add}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.Date}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.Grade}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.Type}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="start center">
+          <h5 class="px13 lw">{{arr.Cubes}}</h5>
+        </div>
+        <div class="v" style="width:14.28%" layout="row" layout-align="center center">
+          <div class="vh" *ngIf="arr.Third_Party == 'Yes'">
+            <img style="height:20px" src="/assets/images/question.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

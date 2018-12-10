@@ -1,0 +1,36 @@
+<div class="b" layout="column" layout-align="start center">
+  <div class="h bxshdw1 brd bBrd p" layout="column" layout-align="space-between center" style="height: 200px;background:#2196F3">
+      <div class="h" style="height:calc(100% - 20px)" layout="row" layout-align="space-around center">
+          <div class="pt" style="height:70px;width:70px;">
+            <img src="/assets/images/person.png">
+          </div>
+          <div class="h circle bg1 lp" style="width:calc(100% - 70px)" layout="column" layout-align="center start">
+              <h5 class="px14 pt" style="color:#FFF;font-weight: 600">Mr.Qulity Manager</h5>
+              <h5 class="px14 pt tm" style="color:#FFF;font-weight: 600">Email:qm@pratikgroup.in</h5>
+          </div>
+      </div>
+      <div class="h" style="height:20px" layout="row" layout-align="space-between center">
+        <h5 class="px14 pt hw" style="color:#FFF">Details</h5>
+        <img class="pt" style="height:18px;transform: rotate(90deg)" src="/assets/images/down.png">
+      </div> 
+  </div>
+  <div class="h p" style="height: calc(100% - 200px)">
+    <div class="h" style="height:calc(100% - 35px)">
+      <div class="h" style="height:calc(100% - 35px)">
+          <div class="h" style="height:35px" *ngFor="let menu of menu;let i = index" layout="row" layout-align="start center">
+            <img class="pt" [ngClass]="{clr:selectedIndex == i,clr1:selectedIndex != i}" style="height:18px;" src="{{menu.CML_IMAGE}}">
+            <h5 class="px14 pt hw lm" [ngClass]="{clr:selectedIndex == i,clr1:selectedIndex != i}"  >{{menu.CML_TITLE}}</h5>
+          </div>
+      </div>
+      <div class="h" style="height:35px" layout="row" layout-align="start center">
+          <img class="pt" style="height:22px;" src="/assets/images/logout.png">
+          <h5 class="px14 pt lm" style="color:#464545;font-weight: 600" >Logout</h5>
+      </div>
+     </div>
+    <div class="h bxshdw1 rp" style="height:35px;background:#ededed" layout="row" layout-align="end center">
+        <img class="pt" style="height:21px;" src="/assets/images/update.png">
+        <img class="pt lm" style="height:21px;" src="/assets/images/question.png">
+        <img class="pt lm" style="height:21px;" src="/assets/images/info.png">
+    </div>
+  </div>
+</div>
